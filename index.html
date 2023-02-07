@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <title>Tienda de Cafe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1>Tienda de Cafe</h1>
+  </header>
+  <main class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="productos">
+          <h2>Productos</h2>
+          <ul id="productos">
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="contenedorInputs">
+          <div class="formulario">
+            <h3>Crear Producto</h3>
+            <form class="row g-3" onsubmit="cargarProducto(this)">
+              <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+              </div>
+              <div class="col-md-6">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precio" name="precio">
+              </div>
+              <div class="col-12">
+                <label for="descuento" class="form-label">Descuento %</label>
+                <input type="text" class="form-control" id="descuento" placeholder="en porcentaje">
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary" id="crearProducto">Crear producto</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="controles">
+            <button id="mostrar">Mostrar productos</button>
+            <button id="mostrarSinDescuento">Mostrar productos sin descuento</button>
+            <button id="borrar">Borrar Productos</button>
+          </div>
+
+          <div class="container resenas">
+            <h2 class="text-center">Reseñas</h2>
+            <ul id="resenas" class="list-group">
+            </ul>
+            <button type="submit" id="cargar">Cargar reseñas</button>
+            <p id="cargando" style="display: none;"><em>cargando reseñas...</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+      </div>
+    </div>
+
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
